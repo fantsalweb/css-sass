@@ -11,6 +11,12 @@
   text-shadow: 2px;
 }
 
+/*HOJAS DE ESTILO PARCIALES*/
+/*EJEMPLO 1*/
+#colors {
+  color: red;
+}
+
 /*REGLAS ANIDADAS*/
 /*EJEMPLO 1*/
 #main p {
@@ -271,4 +277,14 @@ p {
  *    @import url(foo)                @import url(foo) */
 /* Los ejemplos se hacen en la parte superior ya que @import debe estar al comienzo */
 /*HOJAS DE ESTILO PARCIALES*/
+/* Los ejemplos se hacen en la parte superior ya que @import debe estar al comienzo */
+/*ANIDANDO REGLAS @import*/
+/* Los archivos importados con reglas @import anidadas no pueden
+ * contener elementos y directivas que sólo pueden colocarse en el
+ * primer nivel jerárquico de las hojas de estilos, como @mixin o
+ * @charset */
+/*EJEMPLO 1*/
+#main .example {
+  color: blue;
+}
 /*# sourceMappingURL=comprobando.css.map */
