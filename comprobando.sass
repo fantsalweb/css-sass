@@ -228,6 +228,10 @@ $contenido: "Contenido no nulo" !default
  * contener elementos y directivas que sólo pueden colocarse en el
  * primer nivel jerárquico de las hojas de estilos, como @mixin o 
  * @charset */
+ /* Tampoco es posible anidar reglas @import dentro de los mixin
+  * y las directivas de control */
  /*EJEMPLO 1*/
 #main
     @import "example"
+/*LA REGLA @media*/
+/*EJEMPLO 1*/
