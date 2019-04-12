@@ -250,4 +250,12 @@ p {
 
 /*REGLAS @ Y DIRECTIVAS*/
 /*LA REGLA @import*/
+/*
+ *    Regla @                         Resultado
+ *    @import "foo.scss"              Se importa el archivo foo.scss
+ *    @import "foo"                   Se importa el archivo foo.scss
+ *    @import "foo.css"               @import "foo.css"
+ *    @import "foo" screen            @import "foo" screen
+ *    @import "http://foo.com/bar"    @import "http://foo.com/bar"
+ *    @import url(foo)                @import url(foo) */
 /*# sourceMappingURL=comprobando.css.map */
