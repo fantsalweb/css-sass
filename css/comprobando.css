@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/*REGLAS ANIDADAS*/
+/*EJEMPLO 1*/
+#main p {
+  color: #ff00ff;
+  width: 90%;
+}
+
+#main p .redbox {
+  background-color: blue;
+  color: #fff;
+}
+
+/*EJEMPLO 2*/
+#main {
+  width: 97%;
+}
+
+#main p, #main div {
+  font-size: 2em;
+}
+
+#main p a, #main div a {
+  font-weight: bold;
+}
+
+#main pre {
+  font-size: 3em;
+}
+
+/*REFERENCIAS A LOS SELECTORES PADRES*/
+/*EJEMPLO 1*/
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body.firefox a {
+  font-weight: normal;
+}
+
+/*EJEMPLO 2*/
+#main {
+  color: black;
+}
+
+#main a {
+  font-weight: bold;
+}
+
+#main a:hover {
+  color: red;
+}
+
+/*EJEMPLO 3*/
+#main {
+  color: black;
+}
+
+#main-sidebar {
+  border: 1px solid;
+}
+
+/*PROPIEDADES ANIDADAS*/
+/*EJEMPLO 1*/
+.funky {
+  font-family: fantasy;
+  font-size: 30em;
+  font-weight: bold;
+}
+
+/*EJEMPLO 2*/
+.funky {
+  font: 20px/24px fantasy;
+  font-weight: bold;
+}
+
+/*COMENTARIOS*/
+/* Este comentario de varias líneas
+   se mostrara en el archivo css
+   compilado */
+/*SASSSCRIPT*/
+/*VARIABLES*/
+/* Una limitación importante de las variables es que sólo están disponibles dentro del
+ * contexto donde se han definido. Esto significa que si defines la variable dentro de
+ * una regla anidada, sólo estará disponible para esas reglas anidadas */
+#main {
+  width: 5em;
+}
+
+/*TIPOS DE DATOS*/
+/* Números (1, 2, 13, 10px)
+ * Cadenas de texto con o sin comillas simples o dobles
+ * Colores (#04a3f9, rgba(255, 0, 0, 0.5))
+ * Valores lógicos o booleanos (true, false)
+ * Valores nulos (null)
+ * Listas de valores, separadas por espacio en blanco o comas (1.5em 1em 0 2em, Helvetica, Arial, sans-serif)
+ * Pares formado por clave : valor (key1 : value1, key2 : value2) */
+/*CADENAS DE TEXTO*/
+/*EJEMPLO 1*/
+body.firefox .header:before {
+  content: "Hola, soy un usuario de Firefox!";
+}
+
+/*LISTAS*/
+/*-------------------------------*/
+/*MAPAS*/
+/*OPERADORES*/
+/* Todos los tipos de datos soportan el operador (== y !=)
+ * para comprobar si dos valores son iguales o distintos.
+ * Además, cada tipo de dato define otros operadores propios */
+/*OPERADORES PARA NÚMEROS*/
+/* SassScript soporta los cinco operadores aritméticos básicos
+ * (suma +, resta -, multiplicación *, división / y módulo %) */
+/*EJEMPLO 1*/
+p {
+  width: 1.11111in;
+}
+
+/* Con los números también se pueden usar los operadores
+ * relacionales (<, >, <=, >=) y los de igualdad (==, !=) */
+/* EL CARACTER / CON LA DIVISIÓN DE NÚMEROS */
+/* Existen tres situaciones en las que el carácter / siempre
+ * se interpreta como una división matemática:
+ * - Si uno de los operandos es una variable o el resultado de
+ *   una función
+ * - Si el valor esta encerrado entre parentesis
+ * - Si el valor se utiliza como parte de una expresión matemática */
+/*EJEMPLO 1*/
+p {
+  /* El carácter '/' se interpreta como código CSS normal */
+  font: 10px/8px;
+  /* El carácter '/' se interpreta como una división */
+  /* Uno de los operandos es una variable */
+  width: 500px;
+  /* Uno de los operandos es el resultado de una función */
+  width: 1;
+  /* Los paréntesis encierran la expresión */
+  height: 250px;
+  /* El '+' indica que es una expresión matemática */
+  margin-left: 9px;
+}
+
+/*EJEMPLO 2*/
+p {
+  font: 12px/30px;
+}
+
+/*OPERADORES PARA COLORES*/
+/*EJEMPLO 1*/
+p {
+  color: #050709;
+}
+
+/*EJEMPLO 2*/
+p {
+  color: #020406;
+}
+
+/*EJEMPLO 3*/
+/* Para operaciones con colores con canal alpha los dos
+ * operandos tendrán que tener el mismo canal alpha */
+p {
+  color: rgba(255, 255, 0, 0.75);
+}
+
+/*EJEMPLO 4*/
+/* El canal alpha se puede ajustar con la función
+ * opacify() o transparentize() */
+p {
+  color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(255, 0, 0, 0.25);
+}
+
+/*OPERADORES PARA CADENAS DE TEXTO*/
+/*EJEMPLO 1*/
+p {
+  cursor: e-resize;
+}
+
+/*EJEMPLO 2*/
+p:before {
+  content: "Foo Bar";
+  font-family: sans-serif;
+}
+
+/*EJEMPLO 3*/
+p {
+  margin: 7px auto;
+}
+
+/*EJEMPLO 4*/
+p:before {
+  content: "¡Me he comido 15 pasteles!";
+}
+
+/*EJEMPLO 5*/
+p:before {
+  content: "¡Me he comido  pasteles!";
+}
+
+/*OPERADORES PARA VALORES LÓGICOS O BOOLEANOS*/
+/* SassScript soporta los operadores and, or y not */
+/*OPERADORES PARA LISTAS*/
+/*-------------------------------*/
+/*PARENTESIS*/
+/*EJEMPLO 1*/
+p {
+  width: 7em;
+}
+
+/*FUNCIONES*/
+/*EJEMPLO 1*/
+p {
+  color: red;
+}
+
+/*ARGUMENTOS CON NOMBRE*/
+/*EJEMPLO 1*/
+p {
+  color: red;
+}
+
+/*INTERPOLACIÓN*/
+/*EJEMPLO 1*/
+p.foo {
+  border-color: blue;
+}
+
+/*EJEMPLO 2*/
+p {
+  font: 12px/30px;
+}
+
+/*VARIABLES CON VALORES POR DEFECTO*/
+/*EJEMPLO 1*/
+#main {
+  contenido: "Primer contenido";
+  nuevo-contenido: "Tercer contenido";
+}
+
+/*EJEMPLO 2*/
+#main {
+  contenido: "Contenido no nulo";
+}
+
+/*REGLAS @ Y DIRECTIVAS*/
+/*LA REGLA @import*/
+/*# sourceMappingURL=comprobando.css.map */
