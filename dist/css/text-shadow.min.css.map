@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,AAAC,CACT,WAAW,CAAE,GACjB,CAAC",
+    "sources": [
+        "../../text-shadow.scss"
+    ],
+    "names": [],
+    "file": "text-shadow.min.css"
+}

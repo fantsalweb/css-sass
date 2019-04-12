@@ -1,4 +1,16 @@
 @charset "UTF-8";
+/*LA REGLA @import*/
+/*EJEMPLO 1*/
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans");
+/*EJEMPLO 2*/
+#rounded-corners {
+  border-radius: 50%;
+}
+
+#text-shadow {
+  text-shadow: 2px;
+}
+
 /*REGLAS ANIDADAS*/
 /*EJEMPLO 1*/
 #main p {
@@ -257,4 +269,6 @@ p {
  *    @import "foo" screen            @import "foo" screen
  *    @import "http://foo.com/bar"    @import "http://foo.com/bar"
  *    @import url(foo)                @import url(foo) */
+/* Los ejemplos se hacen en la parte superior ya que @import debe estar al comienzo */
+/*HOJAS DE ESTILO PARCIALES*/
 /*# sourceMappingURL=comprobando.css.map */

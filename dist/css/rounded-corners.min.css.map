@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,AAAC,CACb,aAAa,CAAE,GACnB,CAAC",
+    "sources": [
+        "../../rounded-corners.scss"
+    ],
+    "names": [],
+    "file": "rounded-corners.min.css"
+}
