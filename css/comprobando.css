@@ -38,7 +38,7 @@
   font-size: 2em;
 }
 
-#main p a, #main div a {
+#main p a, #main p #fake-links .link, #fake-links #main p .link, #main p #demo .overview .fakelink, #demo .overview #main p .fakelink, #main div a, #main div #fake-links .link, #fake-links #main div .link, #main div #demo .overview .fakelink, #demo .overview #main div .fakelink {
   font-weight: bold;
 }
 
@@ -48,16 +48,16 @@
 
 /*REFERENCIAS A LOS SELECTORES PADRES*/
 /*EJEMPLO 1*/
-a {
+a, #fake-links .link, #demo .overview .fakelink {
   font-weight: bold;
   text-decoration: none;
 }
 
-a:hover {
+a:hover, .hoverlink, #fake-links .link:hover, #demo .overview .fakelink:hover {
   text-decoration: underline;
 }
 
-body.firefox a {
+body.firefox a, body.firefox #fake-links .link, #fake-links body.firefox .link, body.firefox #demo .overview .fakelink, #demo .overview body.firefox .fakelink {
   font-weight: normal;
 }
 
@@ -66,11 +66,11 @@ body.firefox a {
   color: black;
 }
 
-#main a {
+#main a, #main #fake-links .link, #fake-links #main .link, #main #demo .overview .fakelink, #demo .overview #main .fakelink {
   font-weight: bold;
 }
 
-#main a:hover {
+#main a:hover, #main .hoverlink, #main #fake-links .link:hover, #fake-links #main .link:hover, #main #demo .overview .fakelink:hover, #demo .overview #main .fakelink:hover {
   color: red;
 }
 
@@ -292,4 +292,118 @@ p {
 
 /*LA REGLA @media*/
 /*EJEMPLO 1*/
+.sidebar {
+  width: 300px;
+}
+
+@media screen and (orientation: landscape) {
+  .sidebar {
+    width: 500px;
+  }
+}
+
+/*EJEMPLO 2*/
+@media screen and (orientation: landscape) {
+  .sidebar {
+    width: 500px;
+  }
+}
+
+/*EJEMPLO 3*/
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .sidebar {
+    width: 500px;
+  }
+}
+
+/*LA REGLA @extend*/
+/*EJEMPLO 1*/
+.error, .seriusError, .criticalError {
+  border: 1px #ff0000;
+  background-color: #ffdddd;
+}
+
+.seriusError, .criticalError {
+  border-width: 3px;
+}
+
+/*EJEMPLO 2*/
+.error, .seriusError, .criticalError {
+  border: 1px #ff0000;
+  background-color: #ffdddd;
+}
+
+.error .intrusion, .seriusError .intrusion, .criticalError .intrusion {
+  background-image: url("/image/hacked.png");
+}
+
+.seriusError, .criticalError {
+  border-width: 3px;
+}
+
+/*EJEMPLO 3*/
+a:hover, .hoverlink, #fake-links .link:hover, #demo .overview .fakelink:hover {
+  text-decoration: underline;
+}
+
+/*EJEMPLO 4*/
+.comment a.user:hover, .comment .user.hoverlink, .comment #fake-links .user.link:hover, #fake-links .comment .user.link:hover, .comment #demo .overview .user.fakelink:hover, #demo .overview .comment .user.fakelink:hover {
+  font-weight: bold;
+}
+
+/*EJEMPLO 5*/
+.error, .seriusError, .criticalError {
+  border: 1px #ff0000;
+  background-color: #ffdddd;
+}
+
+.attention, .seriusError, .criticalError {
+  font-size: 3em;
+  background-color: #ffff00;
+}
+
+.seriusError, .criticalError {
+  border-width: 3px;
+}
+
+/*EJEMPLO 6*/
+.error, .seriusError, .criticalError {
+  border: 1px #f00;
+  background-color: #ff0000;
+}
+
+.seriusError, .criticalError {
+  border-width: 3px;
+}
+
+.criticalError {
+  position: fixed;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+}
+
+/*EJEMPLO 7*/
+a, #fake-links .link, #demo .overview .fakelink {
+  color: blue;
+}
+
+a:hover, .hoverlink, #fake-links .link:hover, #demo .overview .fakelink:hover {
+  text-decoration: underline;
+}
+
+/*EJEMPLO 8*/
+#admin .tabbar a, #admin .tabbar #fake-links .link, #fake-links #admin .tabbar .link, #admin .tabbar #demo .overview .fakelink, #demo .overview #admin .tabbar .fakelink {
+  font-weight: bold;
+}
+
+/*EJEMPLO 9*/
+#context #fake-links .link.notice, #fake-links #context .link.notice, #context #demo .overview .fakelink.notice, #demo .overview #context .fakelink.notice, #context a.notice {
+  color: blue;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+/*LA REGLA @at-root*/
 /*# sourceMappingURL=comprobando.css.map */

@@ -235,3 +235,91 @@ $contenido: "Contenido no nulo" !default
     @import "example"
 /*LA REGLA @media*/
 /*EJEMPLO 1*/
+.sidebar
+    width: 300px
+    @media screen and (orientation: landscape)
+        width: 500px
+/*EJEMPLO 2*/
+@media screen
+    .sidebar
+        @media (orientation: landscape)
+            width: 500px
+/*EJEMPLO 3*/
+$media: screen
+$feature: -webkit-min-device-pixel-ratio
+$value: 1.5
+@media #{$media} and ($feature: $value)
+    .sidebar
+        width: 500px
+/*LA REGLA @extend*/
+/*EJEMPLO 1*/
+.error
+    border: 1px #ff0000
+    background-color: #ffdddd
+.seriusError
+    @extend .error
+    border-width: 3px
+/*EJEMPLO 2*/
+.error
+    border: 1px #ff0000
+    background-color: #ffdddd
+.error .intrusion
+    background-image: url("/image/hacked.png")
+.seriusError
+    @extend .error
+    border-width: 3px
+/*EJEMPLO 3*/
+.hoverlink
+    @extend a:hover
+a:hover
+    text-decoration: underline
+/*EJEMPLO 4*/
+.hoverlink
+    @extend a:hover
+.comment a.user:hover
+    font-weight: bold
+/*EJEMPLO 5*/
+.error
+    border: 1px #ff0000
+    background-color: #ffdddd
+.attention
+    font-size: 3em
+    background-color: #ffff00
+.seriusError
+    @extend .error
+    @extend .attention
+    border-width: 3px
+/*EJEMPLO 6*/
+.error
+    border: 1px #f00
+    background-color: #ff0000
+.seriusError
+    @extend .error
+    border-width: 3px
+.criticalError
+    @extend .seriusError
+    position: fixed
+    top: 10%
+    bottom: 10%
+    left: 10%
+    right: 10%
+/*EJEMPLO 7*/
+#fake-links .link
+    @extend a
+a
+    color: blue
+    &:hover
+        text-decoration: underline
+/*EJEMPLO 8*/
+#admin .tabbar a
+    font-weight: bold
+#demo .overview .fakelink
+    @extend a
+/*EJEMPLO 9*/
+#context a%extreme
+    color: blue
+    font-weight: bold
+    font-size: 2em
+.notice
+    @extend %extreme
+/*LA REGLA @at-root*/
